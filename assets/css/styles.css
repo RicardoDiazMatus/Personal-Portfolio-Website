@@ -65,6 +65,11 @@
   --mb-6-5: 6.5rem;
   --mb-7: 7rem;
   --mb-7-5: 7.5rem;
+  --mb-8: 8rem;
+  --mb-8-40: 8.40rem;
+  --mb-8-5: 8.5rem;
+  --mb-8-75: 8.75rem;
+  --mb-9: 9rem;
 
   
 
@@ -477,7 +482,7 @@ img {
 .button--small {
   padding: 0.75rem 1rem;
   margin-top: 1.5rem;
-  margin-left: var(--mb-7-5);
+  margin-left: var(--mb-8-40);
  
   
 }
