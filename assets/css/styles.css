@@ -482,9 +482,12 @@ img {
 .button--small {
   padding: 0.75rem 1rem;
   margin-top: 1.5rem;
-  margin-left: var(--mb-8-40);
- 
-  
+  margin-left: auto; /* Para centrar */
+  margin-right: auto; /* Para centrar */
+  display: block; /* Asegúrate de que el botón ocupe toda la línea */
+  width: 90px; /* Establecer un ancho fijo */
+  height: 50px; /* Establecer una altura fija */
+  text-align: center; /* Centrar texto */
 }
 
 .button--link {
@@ -1077,30 +1080,6 @@ img {
 }
 
 /*==================== MEDIA QUERIES ====================*/
-
-@media (width <= 320px) {
-  .button--small {
-    padding: 0.75rem 1rem;
-    margin-top: 1.5rem;
-    margin-left: 5rem;   
-  }
-}
-@media (width >= 350px) {
-  .button--small {
-    padding: 0.75rem 1rem;
-    margin-top: 1.5rem;
-    margin-left: 7rem;   
-  }
-}
-@media (width >= 425px) {
-  .button--small {
-    padding: 0.75rem 1rem;
-    margin-top: 1.5rem;
-    margin-left: 8.5rem;   
-  }
-}
-
-
 /* For small devices 350*/
 @media screen and (max-width: 576px) {
   .container {
@@ -1133,8 +1112,7 @@ img {
   .qualification__data {
     gap: 0.5rem;
   }
-
-  
+   
 }
 /* For medium devices 577px*/
 @media screen and (min-width: 568px) {
@@ -1156,7 +1134,7 @@ img {
   .portfolio__image-a{
     transform: translateY(10px);
   }
-
+  
   .about__container,
   .skills__container,
   .portfolio__content,
@@ -1183,6 +1161,8 @@ img {
   body {
     margin: 0;
   }
+
+  
 
   .section {
     padding: 6rem 0 2rem;
@@ -1338,11 +1318,7 @@ img {
     margin-top: 1rem;  
      
 }  
-.button--small {
-  padding: 0.75rem 1rem;
-  margin-top: 1.5rem;
-  margin-left: 7.5rem;   
-}
+
 
 }
 
@@ -1398,9 +1374,5 @@ img {
     grid-template-columns: repeat(2, 1fr);
     
   }
-  .button--small {
-    padding: 0.75rem 1rem;
-    margin-top: 1.5rem;
-    margin-left: 8.5rem;   
-  }
+
 }
