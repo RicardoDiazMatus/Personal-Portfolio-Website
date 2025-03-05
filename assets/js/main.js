@@ -385,6 +385,24 @@ document.addEventListener('DOMContentLoaded', () => {
   contactForm.addEventListener('submit', sendEmail);
 });
 
+//Efecto de Desplazamiento Scrollup desde la Derecha
+const scrollUpButton = document.querySelector('.scrollup');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollUpButton.classList.add('active');
+  } else {
+    scrollUpButton.classList.remove('active');
+  }
+});
+
+scrollUpButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   const contactForm = document.getElementById('contact-form');
