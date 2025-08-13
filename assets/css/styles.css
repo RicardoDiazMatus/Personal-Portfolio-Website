@@ -456,6 +456,7 @@ img {
   transition: transform 0.3s ease;
 }
 
+
 .button--white {
   background-color: #fff;
   color: var(--first-color);
@@ -489,6 +490,10 @@ img {
   width: 90px; /* Establecer un ancho fijo */
   height: 50px; /* Establecer una altura fija */
   text-align: center; /* Centrar texto */
+}
+.button__small {
+  padding: 0.75rem 1rem;
+
 }
 
 .button--link {
@@ -721,6 +726,9 @@ img {
   font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
   color: var(--title-color);
+  display: flex; 
+  align-items:start;
+  gap: 0.5rem;
 }
 
 .qualification__rounder {
@@ -751,6 +759,128 @@ img {
   color:#006494;
   font-size: var(--h2-font-size);
 }
+ 
+/*==================== EXPERIENCE WORK ====================*/
+.experience__container {
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.experience__content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 3.5rem .5rem 1.25rem 1.5rem;
+  border-radius: .25rem;
+  box-shadow: 0 6px 3px rgba(0,0,0,.15);
+  transition: .3s;
+}
+
+.experience__content:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0, .30)
+}
+
+.experience__icon1 {
+  display: block; 
+  margin-bottom: var(--mb-1);
+  width: 50px;
+  height: 50px;
+  border-radius: 5%;
+
+}
+.experience__icon2 { 
+  display: block; 
+  margin-bottom: var(--mb-1);
+  width: 70px;
+  height: 50px;
+  border-radius: 25%;
+
+}
+
+.experience__title {
+  font-size: var(--h5-font-size);
+  margin-bottom: var(--mb-0-5);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+.experience__subtitle {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+  font-weight: var(--font-medium);
+
+  
+}
+
+.experience__button {
+  cursor: pointer;
+  font-size: var(--small-font-size);
+}
+
+.experience__button:hover .button__icon {
+  transform: translateX(.25rem);
+}
+
+.experience__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  opacity: 0; 
+  visibility: hidden;
+  transition: .3s
+}
+
+.experience__modal-content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+.experience__modal-experience {
+  row-gap: 1rem;
+}
+
+.experience__modal-service {
+  display: flex;
+}
+
+.experience__modal-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-1-5);
+  color: var(--title-color);
+}
+
+.experience__modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.experience__modal-icon {
+  color: var(--first-color);
+  margin-right: var(--mb-0-25);
+
+}
+
+/* Active Modal */
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
 
 
 /*==================== PORTFOLIO ====================*/
@@ -1132,6 +1262,18 @@ img {
   .qualification__data {
     gap: 0.5rem;
   }
+
+  .experience__container {
+    grid-template-columns: max-content;
+    justify-content: center;
+}
+
+.experience__content {
+    padding-right: 3.5rem;
+}
+.experience__modal {
+    padding: 0 .5rem;
+}
    
 }
 /* For medium devices 577px*/
@@ -1169,6 +1311,8 @@ img {
     grid-template-columns: 0.6fr;
     justify-content: center;
   } 
+
+  
  
 }
 
@@ -1282,11 +1426,26 @@ img {
     justify-content: center;
   }
   .qualification__button {
-    margin: 0 var(--mb-1);
+    margin: 0 var(--mb-2);
   }
   .qualification__sections {
     grid-template-columns: 0.5fr;
   }
+
+  .experience__container {
+    grid-template-columns: repeat(2, 218px);
+    justify-content: center;
+}
+.experience__icon {
+    font-size: 2rem;
+}
+.experience__content {
+    padding: 6rem 0 2rem 2.5rem;
+}
+
+.experience__modal-content {
+    width: 450px;
+}
 
 
   .portfolio__img {
@@ -1341,6 +1500,8 @@ img {
 }  
 
 
+
+
 }
 
 /* For large devices */
@@ -1359,8 +1520,8 @@ img {
     transform: translateX(-4rem);
   }
 
-  .services__container {
-    grid-template-columns: repeat(3, 238px);
+  .experience__container {
+    grid-template-columns: repeat(2, 250px);
   }
 
   .portfolio__content {
