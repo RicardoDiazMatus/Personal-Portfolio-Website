@@ -1521,7 +1521,7 @@ img {
   }
 
   .experience__container {
-    grid-template-columns: repeat(2, 250px);
+    grid-template-columns: repeat(3, 250px);
   }
 
   .portfolio__content {
